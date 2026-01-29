@@ -8,14 +8,7 @@ app = Flask(__name__)
 
 # Configure CORS to allow your frontend domain
 # In production, replace '*' with your actual frontend URL
-CORS(app, resources={
-    r"/api/*": {
-        "origins": "*",  # Change this to your frontend URL in production
-        "methods": ["GET", "POST", "PUT", "DELETE"],
-        "allow_headers": ["Content-Type"]
-    }
-})
-
+CORS(app)
 # Sample data storage (in-memory)
 # Note: In production, you should use a real database like PostgreSQL
 users = [
